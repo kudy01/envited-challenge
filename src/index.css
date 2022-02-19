@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: "OpenSansLight";
+  src: local("OpenSans"), url(./fonts/OpenSans-Light.ttf) format("truetype");
+}
+
+@font-face {
   font-family: "OpenSansBold";
   src: local("OpenSans"), url(./fonts/OpenSans-Bold.ttf) format("truetype");
 }

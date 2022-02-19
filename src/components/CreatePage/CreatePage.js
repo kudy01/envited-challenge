@@ -14,16 +14,19 @@ const CreatePage = () => {
       eventName: "",
       hostName: "",
       location: "",
-      enteredDate: "",
+      startDate: "",
+      endDate: "",
+      eventFooter: "",
     },
     validationSchema: Yup.object({
       eventName: Yup.string().required("You must enter a event name"),
       hostName: Yup.string().required("You must enter a host name"),
       location: Yup.string().required("You must enter a location"),
-      enteredDate: Yup.string().required("You must enter a date"),
+      startDate: Yup.date().required("You must enter a date"),
+      endDate: Yup.date().required("You must enter a date"),
+      eventFooter: Yup.string(),
     }),
     onSubmit: (values) => {
-      alert(JSON.stringify(values));
       sessionStorage.setItem("event", JSON.stringify(values));
       history.push(`/event/${values.id}`);
     },
@@ -79,16 +82,43 @@ const CreatePage = () => {
               )}
             </div>
             <div className="mv4">
-              <label className="label">Date:</label>
+              <label className="label">Start Date:</label>
               <input
                 type="date"
-                name="enteredDate"
-                value={formik.values.enteredDate}
+                name="startDate"
+                value={formik.values.startDate}
                 onChange={formik.handleChange}
                 className="mt1 pa2 input-reset ba b--black bw1 bg-transparent w-100 br3 inputText"
               />
-              {formik.errors.enteredDate && formik.touched.enteredDate && (
-                <p className="input-error">{formik.errors.enteredDate}</p>
+              {formik.errors.startDate && formik.touched.startDate && (
+                <p className="input-error">{formik.errors.startDate}</p>
+              )}
+            </div>
+            <div className="mv4">
+              <label className="label">End Date:</label>
+              <input
+                type="date"
+                name="endDate"
+                value={formik.values.endDate}
+                onChange={formik.handleChange}
+                className="mt1 pa2 input-reset ba b--black bw1 bg-transparent w-100 br3 inputText"
+              />
+              {formik.errors.endDate && formik.touched.endDate && (
+                <p className="input-error">{formik.errors.endDate}</p>
+              )}
+            </div>
+            <div className="mv4">
+              <label className="label">Event Footer</label>
+              <input
+                type="text"
+                name="eventFooter"
+                value={formik.values.eventFooter}
+                onChange={formik.handleChange}
+                className="mt1 pa2 input-reset ba b--black bw1 bg-transparent w-100 br3 inputText"
+                placeholder="Enter a footer description"
+              />
+              {formik.errors.eventFooter && formik.touched.eventFooter && (
+                <p className="input-error">{formik.errors.eventFooter}</p>
               )}
             </div>
             <>
