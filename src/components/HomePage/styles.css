@@ -1,0 +1,15 @@
+.titleLandingPage {
+  font-family: "OpenSansBold";
+  color: white;
+}
+
+.subTitle {
+  font-family: "OpenSansRegular";
+  color: white;
+}
+
+.customButtonLandingPage {
+  background: linear-gradient(107.04deg, #06d6a0 48.99%, #5794f7 118.32%);
+  font-family: "OpenSansBold";
+  color: white;
+}

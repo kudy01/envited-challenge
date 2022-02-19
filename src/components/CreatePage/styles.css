@@ -1,0 +1,20 @@
+.title {
+  color: black;
+  font-family: "OpenSansExtraBold";
+}
+.label {
+  color: black;
+  font-family: "OpenSansBold";
+}
+
+.inputText {
+  color: black;
+  font-family: "OpenSansRegular";
+}
+
+.input-error {
+  color: #d41a1a;
+  font-family: "OpenSansLight";
+  font-size: 16px;
+  margin: 4px 0 4px 0;
+}

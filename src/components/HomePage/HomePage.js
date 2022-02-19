@@ -1,6 +1,7 @@
 import { React } from "react";
 import { Link } from "react-router-dom";
 
+import "./styles.css";
 import Header from "../Header/Header";
 import Left from "../../images/Product Image-Left.png";
 import Middle from "../../images/Product Image-Middle.png";
@@ -12,32 +13,17 @@ const HomePage = () => {
     <>
       <Header />
       <main className="flex justify-center flex-col">
-        <div className="w-96 md:w-full">
-          <div
-            style={{
-              fontFamily: "OpenSansBold",
-            }}
-            className="f1 white text-center mb5"
-          >
+        <div className="w-96">
+          <div className="f1 text-center mb5 titleLandingPage">
             Facebook events without Facebook.
           </div>
-          <div
-            style={{
-              fontFamily: "OpenSansRegular",
-            }}
-            className="f4 white mb5 center"
-          >
+          <div className="f4 mb5 center subTitle">
             Easily host and share events with your friends across any social
             media.
           </div>
           <Link to={"/create"}>
             <a
-              style={{
-                background:
-                  "linear-gradient(107.04deg, #06D6A0 48.99%, #5794F7 118.32%)",
-                fontFamily: "OpenSansBold",
-              }}
-              className="f4 link dim br-pill ph3 pv2 mb2 dib white mr4 pointer"
+              className="f4 link dim br-pill ph3 pv2 mb2 dib mr4 pointer customButtonLandingPage"
               href="#0"
             >
               🎉 &nbsp;Create my next event
