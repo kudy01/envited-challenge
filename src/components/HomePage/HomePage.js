@@ -31,7 +31,15 @@ const HomePage = () => {
           </Link>
           <>
             {/* <img src={Social} alt={"Social media icons"} /> */}
-            <div className="mt4 flex justify-center center bg-no-repeat bg-center mb5">
+
+            <div
+              style={{
+                backgroundImage: `url(${Social})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain",
+              }}
+              className="mt4 flex justify-center center bg-no-repeat bg-center mb5"
+            >
               <img
                 style={{ width: "15%", height: "90%" }}
                 className="mt5"
